@@ -1,0 +1,47 @@
+<!-- include header -->
+<%- include('include/_header')%>
+<!-- /include header -->
+
+<!-- main -->
+<div class="container my-4 ">
+    <h2>TODO</h2>
+</div>
+<div class="container my-4">
+    <form action="/api/users" method="POST" id="add_task">
+        <div class="row mb-3">
+          <label for="task" class="col-sm-2 col-form-label">Task</label>
+          <div class="col-sm-10">
+            <input type="hidden" name="id" value="">
+            <input type="text" value="" name="task" class="form-control" id="task">
+          </div>
+        </div>
+        <div class="row mb-3">
+          <label for="desc" class="col-sm-2 col-form-label">Description</label>
+          <div class="col-sm-10">
+            <input type="text" value="" name="description" class="form-control" id="description">
+        </div>
+        <div class="form-group">
+          <label for="gender" class="text-light">Status</label>
+          <div class="radio inline">
+              <input type="radio" id="radio-4" name="status" value="completed"  >
+              <label for="radio-4" class="radio-label">completed</label>
+          </div>
+          <div class="radio inline">
+              <input type="radio" id="radio-5" name="status" value="uncomplete" >
+              <label for="radio-5" class="radio-label">uncomplete</label>
+          </div>
+      </div>
+
+      <div class="form-group">
+          <button type="submit" class="btn text-dark update">Save</button>
+      </div>
+
+      </form>
+      
+</div>
+<!-- /main -->
+
+<!-- include footer -->
+<%- include('include/_footer')%>
+<!-- /include footer -->
+
